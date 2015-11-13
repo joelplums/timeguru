@@ -1,0 +1,15 @@
+<template name="tile">
+	<div class="tile">
+		<label>Title: <input type="text" name="title"></label>
+		<label>Duration:
+			<span class="timeFormatted">
+				<p class="hourField">{{getHours}}h</p>
+				<p class="minuteField">{{getMinutes}}m</p>
+				<p class="secondField">{{getSeconds}}s</p>
+			</span>
+			<input type="text" name="duration" class="duration" autocomplete="off"></label>
+		<button class="removeTile">
+			<i class="fa fa-minus"></i>
+		</button>
+	</div>
+</template>

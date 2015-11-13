@@ -1,0 +1,24 @@
+<template name="headernav">
+	<nav>
+		<div class="col-xs-6 logo">
+			<h1>TimeGuru</h1>
+		</div>
+		<div class="col-xs-3 new">
+			{{#if currentUser}}
+				<a href="{{pathFor 'guruCreate'}}">New Guru</a>
+			{{/if}}
+		</div>
+		<div class="col-xs-3 signin">
+
+			{{#if currentUser}}
+				<div class="profile">
+					<a class="namepos" href="">{{userName}}<i class="fa fa-sort-desc"></i></a>
+					<a class="logout" href="{{pathFor 'landing'}}">Log Out</a>
+				</div>
+			{{else}}
+				<a href="{{pathFor 'logIn'}}">Log In/Sign Up</a>
+			{{/if}}
+		</div>
+	</nav>
+</template>
+

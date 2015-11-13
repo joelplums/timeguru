@@ -1,0 +1,9 @@
+<template name="logIn">
+	<h2>Log In</h2>
+	<form class="login">
+		<label class="col-xs-12">Email <input type="email" name="email"></label>
+		<label class="col-xs-12">Password <input type="password" name="password"></label>
+		<input type="submit" value="Log In">
+	</form>
+	<a href="{{pathFor 'createUser'}}">Create Account</a>
+</template>

@@ -1,0 +1,19 @@
+<template name="editGuru">
+	<div class="editGuru">
+		<h2>Edit Guru</h2>
+		<form class="editGuru">
+			<label>Title: <input type="text" name="guruName" value="{{guruName}}"></label>
+			<label>Transition: <input type="text" name="transition" value="{{transition}}"></label>
+			<div class="timers">
+				{{#each timerdata}}
+					{{> tileEdit}}
+				{{/each}}
+			</div>
+			<span class="addTile">
+				<button><i class="fa fa-plus"></i></button>
+			</span>
+			<button type="submit">Save Changes</button>
+		</form>
+
+	</div>
+</template>

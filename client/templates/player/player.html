@@ -1,0 +1,10 @@
+<template name="playGuru">
+	<div class="playGuru">
+		<h2>{{guruName}}</h2>
+		<div class="timerItem">	
+			{{#each timerdata}}
+				{{> playerTile}}
+			{{/each}}
+		</div>
+	</div>
+</template>

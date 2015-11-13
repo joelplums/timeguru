@@ -1,0 +1,13 @@
+<template name="guruCreate">
+	<form class="guruCreate">
+		<label>Guru Name: <input type="text" name="guruName"></label>
+		<label>Transition: <input type="text" name="transition"></label>
+		<div class="timers">
+			{{> tile}}
+		</div>
+		<span class="addTile">
+			<button><i class="fa fa-plus"></i></button>
+		</span>
+		<button type="submit">Create Guru</button>
+	</form>
+</template>
