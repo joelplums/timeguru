@@ -1,11 +1,12 @@
-Template.tile.onCreated(function() {
-	this.duration = new ReactiveVar();
+Template.tileEdit.onCreated(function() {
+	this.duration = new ReactiveVar(this.data.duration);
 });
 
-Template.tile.helpers({
+Template.tileEdit.helpers({
 	getHours: function() {
 		var templateInstance = UI._templateInstance();
 		var duration = templateInstance.duration.get();
+		console.log(duration);
 		var durArray = duration.split('');
 		if (durArray.length === 5) {
 			var hours = [durArray[0]];
@@ -18,6 +19,7 @@ Template.tile.helpers({
 	getMinutes: function() {
 		var templateInstance = UI._templateInstance();
 		var duration = templateInstance.duration.get();
+		console.log(duration);
 		var durArray = duration.split('');
 		if (durArray.length === 3) {
 			var minutes = [durArray[0]];
@@ -53,18 +55,15 @@ Template.tile.helpers({
 
 });
 
-Template.tile.events({
-	'keyup .duration': function(e, template) {
-		template.duration.set($(e.target).val());
+Template.tileEdit.events({
+	
+	// 'tileEdit.ready()': function(e, template) {
+	// 	template.duration.set($(e.target).val());
 
-	}
+
+	// }
 
 
 
 
 });
-
-// function displayChange(templateInstance) {
-// 	templateInstance
-// };
-

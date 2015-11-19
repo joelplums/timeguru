@@ -1,10 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,300);
+
 body {
 	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 30px;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.2em;
+}
+h3 {
+	font-size: 1em;
+}
+button {
+	font-size: .7em;
+	font-weight: 100;
 }
 
 nav {
 	width: 100%;
-	height: 90px;
+	height: 110px;
 	border: 2px solid #F5F5F5;
 	border-top: none;
 	border-bottom-left-radius: 10px;
@@ -44,6 +63,11 @@ nav a {
   	z-index: 10;
 }
 
+.profile {
+	font-weight: 100;
+}
+
+
 .logout {
 	display:none;
 	z-index:10;
@@ -55,37 +79,128 @@ nav a {
 /*Guru Tile*/
 
 .gurutile {
-	border: 2px solid #F5F5F5;
-	padding: 10px 20px;
+	transition: .5s;
+	padding: 30px 20px;
+	margin: 20px 0px;
+	border: 1px solid lightblue;
+	border-radius: 5px;
+	
+
 
 }
 
+.gurutile:hover {
+	border-color: #23527c;
+}
 
-.editGuru {
-	background-color: lightblue;
-	border: none;
+.gurutile:hover h3 {
+	font-size: 1.1em;
+	
+}
+
+.gurutile:hover button {
+	font-size: .75em;
+}
+
+.gurutile h3 {
+	transition: .5s;
+	margin-top: 2px;
+
+}
+
+.gurutile button:hover {
+	font-size: .8em;
+}
+
+.gurutilenew {
+	padding: 30px 20px;
+	margin: 20px 0px;
+	background-color: white;
+	border: 1px solid lightblue;
+	border-radius: 5px;
+	transition: .5s;
+}
+
+.gurutilenew:hover {
+	border-color: #23527c;
+	font-size: .8em;
+}
+
+.CTA {
+	text-align: right;
+	
+}
+
+
+
+.ctaplayGuru {
+	transition: .5s;
+	background-color: white;
+	border: 1px solid #96D6AB;
+	color: #96D6AB;
 	border-radius: 5px;
 	margin: 0 5px;
 	padding: 5px 10px;
 }
 
-.deleteGuru {
-	background-color: red;
-	color: white;
-	border: none;
+.ctaplayGuru:hover {
+	border: 1px solid #3C7D5C;
+	color: #3C7D5C;
+}
+
+.ctaplayGuru .fa {
+	margin-right: 5px;
+}
+
+.ctaeditGuru .fa {
+	margin-right: 5px;
+}
+
+.ctaeditGuru {
+	transition: .5s;
+	background-color: white;
+	border: 1px solid lightblue;
+	color: lightblue;
 	border-radius: 5px;
 	margin: 0 5px;
 	padding: 5px 10px;
 }
 
-.deleteGuru:focus {
+.ctaeditGuru:hover {
+	
+	border: 1px solid #23527c;
+	color: #23527c;
+
+}
+
+.ctadeleteGuru {
+	background-color: white;
+	border: 1px solid #E8ADAA;
+	color: #E8ADAA;
+	transition: .5s;
+	border-radius: 5px;
+	margin: 0 5px;
+	padding: 5px 10px;
+}
+
+.ctadeleteGuru .fa {
+	padding-left: 7px;
+}
+
+.ctadeleteGuru:hover {
+	border-color: red;
+	color: red;
+}
+
+.ctadeleteGuru:focus {
 	outline: none;
 }
 
 .confirmDelete {
-	background-color: red;
-	color: white;
-	border: none;
+	background-color: white;
+	border: 1px solid red;
+	color: red;
+	transition: .5s;
 	border-radius: 5px;
 	margin: 0 5px;
 	padding: 5px 10px;
@@ -95,33 +210,10 @@ nav a {
 	outline: none;
 }
 
-.duration {
-	text-align: right;
-/*	outline: none;*/
-	outline-width: thin;
-	background-color: transparent;
-	border: none !important;
-	color: transparent !important;
-	z-index: 5 !important;
-	width: 120px;
-	/*height: 0px !important;
-	widows: 0px !important;*/
 
-}
 
-.timeFormatted {
-	display: flex;
-	text-align: right;
-	z-index: 10;
-	margin-right: 5px;
-	margin-bottom: -30px;
 
-}
 
-.timeFormatted p {
-	text-align: right;
-	flex: 1;
-}
 
 /*player*/
 
@@ -156,5 +248,253 @@ nav a {
 .transitionTile {
 	border: 1px solid black;
 	height: 60px;
+}
+
+/*@media (max-width: 570px) {
+	button {
+		font-size: 0.5em;
+		padding: 5px 5px;
+	}
+	
+	.gurutile h3 {
+		font-size:0.8em;
+
+	}
+
+}*/
+
+/*guru create*/
+.guruCreate {
+	border-radius: 7px;
+	border: 1px solid #F5F5F5;
+	padding: 0 30px 30px 30px;
+}
+.guruCreate .row {
+	text-align: center;
+	padding-top: 40px;
+}
+.guruCreate label {
+	font-size: 1em;
+	text-align: left;
+}
+
+.guruCreate input {
+	font-weight: 100;
+	color: #23527c;
+	text-align: center;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px dotted lightblue;
+	box-shadow: none;
+
+	/*height: 0px !important;
+	widows: 0px !important;*/
+}
+
+.timerrow {
+	padding: 30px 0;
+	border-radius: 7px;
+	background-color: lightblue;
+	margin-top: 40px;
+	position: relative;
+}
+
+.timerrow input {
+	text-align: left;
+	transition: 0.5s;
+}
+
+.timerrow input:focus {
+	border-bottom: 1px dotted #23527c;
+}
+
+.timeunit {
+	position: relative;
+	padding: 20px 20px;
+}
+
+.duration {
+	text-align: right;
+	width: 70%;
+/*	outline: none;*/
+	outline-width: thin;
+	background-color: transparent;
+	color: transparent !important;
+	z-index: 10 !important;
+	padding: 0;
+	flex: 1;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transition: 0.5s;
+
+}
+
+/*.duration:focus {
+	border-bottom: 1px dotted #23527c;
+}*/
+
+.transtimeunit {
+	position: relative;
+}
+
+.transition {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transition: 0.5s;
+	background-color: transparent;
+	color: transparent !important;
+	z-index: 10 !important;
+	border: none;
+}
+
+.transition:focus {
+	border-bottom: 1px dotted #23527c;
+}
+.transformatted {
+	position: absolute;
+	width: 70%;
+	bottom: 0;
+	right: 0;
+	display: flex;
+}
+
+.transformatted p {
+	flex: 1;
+	text-align: right;
+	margin-bottom: 0;
+	font-weight: 100;
+	color: #23527c;
+}
+.timeFormatted {
+	width: 70%;
+	display: flex;
+	text-align: center;
+	z-index: 5;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+
+}
+
+.timeFormatted p {
+	text-align: right;
+	margin-bottom: 0px;
+	flex: 1;
+	font-weight: 100;
+	color: #23527c;
+}
+
+.removeTile {
+	position: absolute;
+	right: 30px;
+	bottom: 28px;
+	border-radius: 45px;
+	border: none;
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	outline: none;
+	transition: 0.1s;
+}
+
+.removeTile:hover {
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	right: 27px;
+	bottom: 25px;
+}
+
+.addTile {
+	padding: 0px;
+}
+
+.addTile button {
+	width: 95%;
+	background-color: white;
+	padding: 0;
+	height: 100px;
+	border-radius: 7px;
+	background-color: #E8FBFF;
+	border: none;
+	outline: none;
+	transition: 1s;
+}
+
+	
+.addTile button:hover {
+	width: 100%;
+	background-color: #c0e2ed;
+	border: none;
+}
+
+
+.row .addition {
+	padding-top: 10px;
+}
+
+.submitaction button {
+	transition: .5s;
+	background-color: white;
+	border: 1px solid lightblue;
+	color: lightblue;
+	border-radius: 5px;
+	padding: 5px 5px;
+	outline: none;
+}
+
+.submitaction button:hover {
+	border: 1px solid #23527c;
+	color: #23527c;
+}
+
+.cancelaction button {
+	background-color: white;
+	border: 1px solid #E8ADAA;
+	color: #E8ADAA;
+	transition: .5s;
+	border-radius: 5px;
+	padding: 5px 5px;
+	outline: none;
+}
+
+.cancelaction button:hover {
+	border-color: red;
+	color: red;
+}
+
+
+/*edit guru*/
+
+.editGuru {
+	border-radius: 7px;
+	border: 1px solid #F5F5F5;
+	padding: 0 30px 30px 30px;
+}
+.editGuru .row {
+	text-align: center;
+	padding-top: 40px;
+}
+.editGuru label {
+	font-size: 1em;
+	text-align: left;
+}
+
+.editGuru input {
+	font-weight: 100;
+	color: #23527c;
+	text-align: center;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px dotted lightblue;
+	box-shadow: none;
+
+	/*height: 0px !important;
+	widows: 0px !important;*/
 }
 

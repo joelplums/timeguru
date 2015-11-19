@@ -1,5 +1,5 @@
 Template.gurutile.events({
-	'click .deleteGuru': function(e) {
+	'click .ctadeleteGuru': function(e) {
 		e.preventDefault();
 		$(e.target).html("Confirm Delete?");
 		$(e.target).attr("class", "confirmDelete");

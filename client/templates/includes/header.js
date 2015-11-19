@@ -2,7 +2,7 @@ Template.headernav.helpers({
 	userName: function() {
 		var user = Meteor.user();
 		console.log(user);
-		return 'Hello, ' + user.profile.firstName + ' ';
+		return user.profile.firstName + ' ';
 		// return (typeof user.profile !== 'undefined') ? 'no name' : user.profile.firstName;
 		// var user = Meteor.users.findOne();
 		// console.log(user);

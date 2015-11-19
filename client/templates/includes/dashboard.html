@@ -1,9 +1,15 @@
 <template name="dashboard">
 	<div class="dashboard">
-		<h2>Guru Dashboard</h2>
+		<h2>Dashboard</h2>
 		{{#each gurus}}
 			{{> gurutile}}
 		{{/each}}
+	
+		<a class="col-xs-12" href="{{pathFor 'guruCreate'}}">
+			<button class="gurutilenew col-xs-12">			
+				Create New Guru
+			</button>
+		</a>
 	</div>
 
 </template>

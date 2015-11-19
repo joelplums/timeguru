@@ -1,19 +1,36 @@
 <template name="editGuru">
 	<div class="editGuru">
 		<h2>Edit Guru</h2>
-		<form class="editGuru">
-			<label>Title: <input type="text" name="guruName" value="{{guruName}}"></label>
-			<label>Transition: <input type="text" name="transition" value="{{transition}}"></label>
+		<div class="row">
+			<label class="col-xs-6">Guru Name: <input type="text" name="guruName" autocomplete="off" value="{{guruName}}"></label>
+			<label class="col-xs-6">Transitions: 
+				<div class="transtimeunit col-xs-8 col-xs-offset-4">
+					
+					<span class="transformatted">
+						<p class="transmin">m</p>
+						<p class="transsec">s</p>
+					</span>
+					<input type="text" class="transition" name="transition" autocomplete="off" value="{{transition}}">
+				</div>
+			</label>
 			<div class="timers">
 				{{#each timerdata}}
 					{{> tileEdit}}
 				{{/each}}
 			</div>
-			<span class="addTile">
-				<button><i class="fa fa-plus"></i></button>
-			</span>
-			<button type="submit">Save Changes</button>
-		</form>
-
+			<div class="addition row">
+				<span class="addTile col-xs-12">
+					<button>Add New Tile</button>
+				</span>
+			</div>
+			<div class="row">
+				<div class="cancelaction">
+					<button class="col-xs-2">Cancel</button>
+				</div>
+				<div class="submitaction">
+					<button class="col-xs-2 col-xs-offset-8" type="submit">Create Guru</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>

@@ -1,13 +1,33 @@
 <template name="guruCreate">
 	<form class="guruCreate">
-		<label>Guru Name: <input type="text" name="guruName"></label>
-		<label>Transition: <input type="text" name="transition"></label>
-		<div class="timers">
-			{{> tile}}
+		<div class="row">
+			<label class="col-xs-6">Guru Name: <input type="text" name="guruName" autocomplete="off"></label>
+			<label class="col-xs-6">Transitions: 
+				<div class="transtimeunit col-xs-8 col-xs-offset-4">
+					
+					<span class="transformatted">
+						<p class="transmin">m</p>
+						<p class="transsec">s</p>
+					</span>
+					<input type="text" class="transition" name="transition" autocomplete="off">
+				</div>
+			</label>
 		</div>
-		<span class="addTile">
-			<button><i class="fa fa-plus"></i></button>
-		</span>
-		<button type="submit">Create Guru</button>
+		<div class="timers">
+		<!-- 	{{> tile}} -->
+		</div>
+		<div class="addition row">
+			<span class="addTile col-xs-12">
+				<button>Add New Tile</button>
+			</span>
+		</div>
+		<div class="row">
+			<div class="cancelaction">
+				<button class="col-xs-2">Cancel</button>
+			</div>
+			<div class="submitaction">
+				<button class="col-xs-2 col-xs-offset-8" type="submit">Create Guru</button>
+			</div>
+		</div>
 	</form>
 </template>

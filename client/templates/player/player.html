@@ -1,9 +1,13 @@
 <template name="playGuru">
 	<div class="playGuru">
 		<h2>{{guruName}}</h2>
+		<button class="play"><i class="fa fa-play"></i>Play</button>
+		<button class="pause"><i class="fa fa-pause"></i>Pause</button>
+
 		<div class="timerItem">	
 			{{#each timerdata}}
 				{{> playerTile}}
+				{{> transitionTile}}
 			{{/each}}
 		</div>
 	</div>

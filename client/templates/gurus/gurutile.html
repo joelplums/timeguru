@@ -1,10 +1,12 @@
 <template name="gurutile">
-	<div class="gurutile col-xs-5">
-		<h3>{{guruName}}</h3>
-		<a href="{{pathFor 'editGuru'}}"><button class="editGuru">Edit</button></a>
-		<a href="{{pathFor 'playGuru'}}"><button class="playGuru">Play</button></a>
+		<div class="gurutile col-xs-12">
 
-		<button class="deleteGuru">Delete</button>
-		
-	</div>
+			<div class="col-xs-3 col-sm-4"><h3>{{guruName}}</h3></div>
+
+			<div class="CTA col-xs-9 col-sm-8">
+				<a href="{{pathFor 'playGuru'}}"><button class="ctaplayGuru"><i class="fa fa-play"></i>Play</button></a>
+				<a href="{{pathFor 'editGuru'}}"><button class="ctaeditGuru"><i class="fa fa-edit"></i>Edit</button></a>
+				<button class="ctadeleteGuru">Delete<i class="fa fa-remove"></i></button>
+			</div>
+		</div>
 </template>

@@ -1,3 +1,4 @@
+
 Template.editGuru.events({
 	'click .addTile': function(e) {
 		e.preventDefault();
